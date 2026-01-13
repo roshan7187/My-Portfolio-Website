@@ -140,11 +140,42 @@
   <main id="ui-layer">
     <!-- Navigation -->
     <nav class="pointer-events-auto"
-      style="position: fixed; top: 2rem; right: 3rem; display: flex; gap: 2rem; mix-blend-mode: difference; z-index: 100;">
-      <a href="#hero" class="nav-link">HOME</a>
-      <a href="#about" class="nav-link">ABOUT</a>
-      <a href="#skills" class="nav-link">SKILLS</a>
-      <a href="#projects" class="nav-link">PROJECTS</a>
+      style="position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: flex-end; padding: 2rem 3rem; z-index: 100; box-sizing: border-box;">
+
+      <!-- Desktop Menu -->
+      <div class="desktop-nav" style="display: flex; gap: 2rem; mix-blend-mode: difference;">
+        <a href="#hero" class="nav-link">HOME</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#skills" class="nav-link">SKILLS</a>
+        <a href="#projects" class="nav-link">PROJECTS</a>
+      </div>
+
+      <!-- Hamburger Button (Mobile Only) -->
+      <button id="hamburger-btn" class="pointer-events-auto" aria-label="Menu"
+        style="display: none; background: none; border: none; cursor: pointer; z-index: 101;">
+        <div class="bar" style="width: 25px; height: 2px; background-color: #fff; margin: 5px 0; transition: 0.4s;">
+        </div>
+        <div class="bar" style="width: 25px; height: 2px; background-color: #fff; margin: 5px 0; transition: 0.4s;">
+        </div>
+        <div class="bar" style="width: 25px; height: 2px; background-color: #fff; margin: 5px 0; transition: 0.4s;">
+        </div>
+      </button>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu"
+        style="position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: rgba(0,0,0,0.95); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transition: 0.5s ease-in-out; backdrop-filter: blur(10px);">
+        <a href="#hero" class="nav-link mobile-link" style="font-size: 2rem;">HOME</a>
+        <a href="#about" class="nav-link mobile-link" style="font-size: 2rem;">ABOUT</a>
+        <a href="#skills" class="nav-link mobile-link" style="font-size: 2rem;">SKILLS</a>
+        <a href="#projects" class="nav-link mobile-link" style="font-size: 2rem;">PROJECTS</a>
+
+        <!-- Mobile Action Buttons -->
+        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+          <a href="https://github.com/roshan7187" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/roshan-kumar-gupta-9310a8230/" class="social-icon"><i
+              class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
     </nav>
 
     <!-- HERO SECTION -->

@@ -306,3 +306,119 @@ section {
   opacity: 0;
   transition: opacity 0.3s;
 }
+
+/* --- Responsive Design --- */
+
+/* Tablet & Smaller Laptops */
+@media (max-width: 1024px) {
+  section {
+    padding: 80px 5% !important;
+  }
+
+  .hero-title {
+    font-size: 5vw !important;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  /* Navigation */
+  .desktop-nav {
+    display: none !important;
+  }
+
+  #hamburger-btn {
+    display: block !important;
+  }
+
+  /* Mobile Menu Styles */
+  #mobile-menu.active {
+    right: 0 !important;
+  }
+
+  /* Hamburger Animation */
+  #hamburger-btn.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  #hamburger-btn.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-btn.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Hero Section */
+  #hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-top: 100px !important;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 3rem !important; /* Fixed size for readability */
+  }
+
+  /* Hero Action Bar */
+  .hero-content > div:last-child {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .glass-btn {
+    width: 80%; /* Wider buttons on mobile */
+    justify-content: center;
+  }
+
+  /* Center the social icons container */
+  .hero-content > div:last-child > div {
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Image */
+  .profile-glow {
+    width: 250px !important;
+    height: 250px !important;
+    margin-bottom: 2rem;
+  }
+
+  /* About & Skills */
+  #about,
+  #skills {
+    padding: 60px 5% !important;
+  }
+
+  h2 {
+    font-size: 2.5rem !important;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr !important; /* Stack columns */
+  }
+
+  /* Projects */
+  /* Hide the 3D text/interaction hint on mobile if it's too complex, 
+     but for now we keep it. Maybe adjust position. */
+  #projects > div {
+    left: 5% !important;
+    top: 80px !important;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* Contact */
+  .contact-form-container {
+    padding: 2rem !important;
+    width: 90%;
+  }
+}
